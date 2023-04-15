@@ -8,8 +8,6 @@ function App() {
     const lift = (obj) =>{
         setChosenPost({...obj})
     }
-
-
     return (
         <div className={'container'}>
            <div className={'left'}>
