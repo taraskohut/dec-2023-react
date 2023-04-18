@@ -1,34 +1,20 @@
 import './App.css';
-import Posts from "./components/Posts/Posts";
-import FullPost from "./components/FullPost/FullPost";
-import {useState} from "react";
-import Launches from "./components/Launches/Launches";
-function App() {
-    let [chosenPost, setChosenPost] = useState({})
-    const lift = (obj) =>{
-        setChosenPost({...obj})
-    }
+
+// import React from 'react';
+import {Comments} from "./components/Coments/Comments";
+import {Users} from "./components/Users/Users";
+
+const App = () => {
     return (
         <div className={'container'}>
-           <div className={'left'}>
-               <Posts lift={lift}/>
-           </div>
-            {
-                chosenPost
-                &&
-                (<div className={'right'}>
-                <FullPost value={chosenPost}/>
-                </div>)
-            }
-        <div>
-            <Launches/>
+             <div className={'left'}>
+                 <Users/>
+             </div>
+             <div className={'right'}>
+                 <Comments/>
+             </div>
         </div>
-
-
-        </div>
-
     );
-
-}
+};
 
 export default App;
